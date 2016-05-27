@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE windows10 [
+ <!ELEMENT windows10 (settings)>
+ <!ELEMENT settings (system, network, personalization, accounts, update)>
+ 
+  <!ELEMENT system (display, notification, apps, power, storage)>
+   <!ELEMENT display (#PCDATA)>
+    <!ELEMENT notification (#PCDATA)>
+    <!ATTLIST notification value CDATA #REQUIRED>
+    <!ELEMENT apps (app*)>
+    <!ELEMENT app (#PCDATA)>
+    <!ELEMENT power (#PCDATA)>
+    <!ATTLIST power settings CDATA #REQUIRED>
+    <!ELEMENT storage (#PCDATA)>
+    <!ATTLIST storage leter CDATA #REQUIRED>
+    
+    <!ELEMENT network (wi-fi, ethernet)>
+   <!ELEMENT wi-fi (red*)>
+   <!ELEMENT red (#PCDATA)>
+    <!ATTLIST red name NMTOKENS #REQUIRED>
+    <!ATTLIST red id ID #REQUIRED>
+    <!ELEMENT ethernet (#PCDATA)>
+    
+    <!ELEMENT personalization (colors, background, themes?)>
+   <!ELEMENT colors (#PCDATA)>
+    <!ELEMENT background (#PCDATA)>
+    <!ELEMENT themes (#PCDATA)>
+    
+    <!ELEMENT accounts (work, yourAccount)>
+   <!ELEMENT work (#PCDATA)>
+    <!ELEMENT yourAccount (admin)>
+    <!ELEMENT admin EMPTY>
+		<!ATTLIST admin name NMTOKEN #FIXED "BrinCo">
+    
+   <!ELEMENT update (windowsUpdate, backup?)>
+   <!ELEMENT windowsUpdate EMPTY>
+			<!ATTLIST windowsUpdate check CDATA #FIXED "every day">
+      <!ATTLIST windowsUpdate lastCheack CDATA #IMPLIED>
+    <!ELEMENT backup (#PCDATA)>
+]>
+
+<windows10>
+  <settings>
+    <system>
+      <display>Landscape</display>    
+      <notification value="show app notification"/>
+      <apps>
+        <app>Battlefield 4</app>      
+        <app>LibreOffice</app>
+        <app>NeatBeans</app>
+      </apps>
+      <power settings="pc goes to sleep">Never</power>
+      <storage leter="C:">160 GB</storage>
+    </system>  
+    
+    <network>
+      <wi-fi>
+        <red name="jazztel" id="r1"/>
+        <red name="Wi-Fi" id="r2"/>      
+      </wi-fi>
+      <ethernet>No disponible Ethernet</ethernet>
+    </network>
+    
+    <personalization>
+      <colors>Blue</colors>  
+      <background>Fill</background>
+      <themes/>
+    </personalization>
+    
+    <accounts>
+      <work>No Conection</work>    
+      <yourAccount>
+        <admin name="BrinCo"></admin>      
+      </yourAccount>
+    </accounts>
+    
+    <update>
+      <windowsUpdate check="every day" lastCheack="yesterday, 21: 55"></windowsUpdate>
+      <backup/>
+    </update>
+  </settings>
+</windows10>

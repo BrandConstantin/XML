@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<universidad>
+  <alumnos>
+    <nombre></nombre>  
+    <nombre></nombre>
+    <nombre></nombre>
+  </alumnos>
+  <!--este seria un segundo documento xml-->
+  <profesores>
+    <nombre></nombre>  
+    <nombre></nombre>
+    <nombre></nombre>
+  </profesores>
+  <!-- este se podriá unir en uno solo -->
+  <alumnos xmlns:alumnos="http//alumnos.xml"/>
+  <profesores xmlns:profesores="http//profesores.xml"/>
+  <asistentes>
+    <alumnos:nombre></alumnos:nombre>
+    <alumnos:nombre></alumnos:nombre>
+    <alumnos:nombre></alumnos:nombre>
+    <profesores:nombre></profesores:nombre>
+    <profesores:nombre></profesores:nombre>
+  </asistentes>
+</universidad>
+
+
+

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- I forma 
+<!DOCTYPE resultadosFutbol [
+<!ELEMENT resultadosFutbol (partidos)>
+<!ELEMENT partidos (partido*)>
+<!ELEMENT partido (equipLocal, equipVisita)>
+<!ATTLIST partido num ID #REQUIRED>
+<!ELEMENT equipLocal EMPTY>
+<!ATTLIST equipLocal goles CDATA #REQUIRED>
+<!ATTLIST equipLocal nombre CDATA #REQUIRED>
+<!ELEMENT equipVisita (#PCDATA)>
+<!ATTLIST equipVisita goles CDATA #REQUIRED>
+<!ATTLIST equipVisita nombre CDATA #REQUIRED>
+
+<resultadosFutbol>
+  <partidos>
+    <partido num="P1">
+      <equipLocal goles="0" nombre="Nottingham Presa"></equipLocal>  
+      <equipVisita goles="1" nombre="Inter de Mitente"></equipVisita>
+    </partido>  
+  </partidos>
+</resultadosFutbol>
+]>-->
+
+<!-- II forma
+<!DOCTYPE resultadosFutbol [
+<!ELEMENT resultadosFutbol (partidos)>
+<!ELEMENT partidos (partido*)>
+<!ELEMENT partido (num, equipLocal, equipVisita, golesEquipLocal, golesEquipVisita)>
+<!ELEMENT num (#PCDATA)>
+<!ELEMENT equipLocal (#PCDATA)>
+<!ELEMENT equipVisita (#PCDATA)>
+<!ELEMENT golesEquipLocal (#PCDATA)>
+<!ELEMENT golesEquipVisita (#PCDATA)>
+
+<resultadosFutbol>
+  <partidos>
+    <partido>
+      <num>P2</num>
+      <equipLocal>Vodka Juniors</equipLocal>  
+      <equipVisita>Esteaua del grifo</equipVisita>
+      <golesEquipLocal>3</golesEquipLocal>
+      <golesEquipVisita>3</golesEquipVisita>
+    </partido>
+  </partidos>
+</resultadosFutbol>
+]> -->
+
+<!-- III forma -->
+<!DOCTYPE resultadosFutbol [
+<!ELEMENT resultadosFutbol (partidos)>
+<!ELEMENT partidos (partido*)>
+<!ELEMENT partido (equipLocal, equipVisita)>
+<!ATTLIST partido num ID #REQUIRED>
+<!ELEMENT equipLocal (nombre, goles)>
+<!ELEMENT equipVisita (nombre, goles)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT goles (#PCDATA)>
+
+]>
+
+<resultadosFutbol>
+  <partidos>    
+    <partido num="P3">
+      <equipLocal>
+        <nombre>Water de Munich</nombre>
+        <goles>4</goles>
+      </equipLocal>  
+      
+      <equipVisita>
+        <nombre>Sparta de Risa</nombre>
+        <goles>2</goles>
+      </equipVisita>
+    </partido>
+  </partidos>
+</resultadosFutbol>

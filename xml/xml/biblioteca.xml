@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca>
+<biblioteca>
+  <ejemplar tipo="libro" titulo="Xml Practioc" editorial="Edición Edi">
+    <autor nombre="Sebastien Boulanger"></autor>
+    <prestado lector="Pepi Calleja">
+      <fecha_pres dia="14"   mes="abril" anio="2004"></fecha_pres>
+      <fecha_devol dia="19" mes="junio" anio="2004"></fecha_devol>
+    </prestado>
+  </ejemplar>
+  <ejemplar tipo="revista" titulo="Informatica en el mundo" editorial="">
+    <autor nombre="Varios"></autor>
+    <prestado lector="Pedro Grillo">
+      <fecha_pres dia="11"   mes="diciembre" anio="2004"></fecha_pres>
+      <fecha_devol dia="29" mes="diciembre" anio="2004"></fecha_devol>
+    </prestado>
+  </ejemplar>
+</biblioteca>

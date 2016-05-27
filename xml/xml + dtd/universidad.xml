@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE universidad [
+<!ELEMENT universidad ((asignaturas, profesores, alumnos))>
+
+<!ELEMENT asignaturas (asignatura+)>
+<!ELEMENT asignatura (nombre_asignatura, horasSemana, numCreditos, carrera, curso?)>
+<!ATTLIST asignatura codigo ID #REQUIRED>
+<!ELEMENT nombre_asignatura (#PCDATA)>
+<!ELEMENT horasSemana (#PCDATA)>
+<!ELEMENT numCreditos (#PCDATA)>
+<!ELEMENT carrera (#PCDATA)>
+<!ELEMENT curso (#PCDATA)>
+
+<!ELEMENT profesores (profesor+)>
+<!ELEMENT profesor ( (dni | pasaporte), nombre, (apellido | apellidos), fechaNacim,( direccion, telefonos, correo)*, despachos, horario)>
+<!ATTLIST profesor codigoProfeAsig IDREFS #IMPLIED>
+<!ELEMENT despachos (despacho+)>
+<!ELEMENT despacho (#PCDATA)>
+<!ELEMENT horario (#PCDATA)>
+
+<!ELEMENT alumnos (alumno+)>
+<!ELEMENT alumno ( (dni | pasaporte), nombre, (apellido | apellidos), fechaNacim,( direccion, telefonos, correo)*, nota)>
+<!ATTLIST alumno codigoAlumnoAsig IDREFS #IMPLIED>
+
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT pasaporte (pais)>
+<!ELEMENT pais (#PCDATA)>
+<!ATTLIST pais  valor CDATA #FIXED "España">
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT fechaNacim (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT telefonos (telefono+)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT correo (#PCDATA)>
+<!ELEMENT nota (#PCDATA)>
+<!ATTLIST nota valor (NP | SS | AP | NT | SB | MH) #REQUIRED>
+]>
+<universidad>
+  <asignaturas>
+    <asignatura codigo="asig1">
+      <nombre_asignatura></nombre_asignatura>    
+      <horasSemana></horasSemana>
+      <numCreditos></numCreditos>
+      <carrera></carrera>
+      <curso></curso>
+    </asignatura> 
+    <asignatura codigo="asig2">
+      <nombre_asignatura></nombre_asignatura>     
+      <horasSemana></horasSemana>
+      <numCreditos></numCreditos>
+      <carrera></carrera>
+      <curso></curso>
+    </asignatura> 
+    <asignatura codigo="asig3">
+      <nombre_asignatura></nombre_asignatura>  
+      <horasSemana></horasSemana>
+      <numCreditos></numCreditos>
+      <carrera></carrera>
+      <curso></curso>
+    </asignatura> 
+  </asignaturas>
+
+  <profesores>
+    <profesor codigoProfeAsig="asig1 asig2">
+     <pasaporte>
+        <pais valor="España"></pais>  
+      </pasaporte>
+      <nombre></nombre>
+      <apellidos></apellidos>
+      <fechaNacim></fechaNacim>
+      <direccion></direccion>
+      <telefonos>
+        <telefono></telefono>  
+      </telefonos>
+      <correo></correo>
+    <despachos>
+      <despacho>Sala 1</despacho>    
+    </despachos>
+    <horario>9 - 13:30</horario>
+    </profesor>
+    
+    <profesor codigoProfeAsig="asig2 asig3">
+     <pasaporte>
+        <pais>Alemania</pais>  
+      </pasaporte>
+      <nombre></nombre>
+      <apellidos></apellidos>
+      <fechaNacim></fechaNacim>
+      <direccion></direccion>
+      <telefonos>
+        <telefono></telefono>  
+      </telefonos>
+      <correo></correo>
+    <despachos>
+      <despacho>Sala 1</despacho>    
+    </despachos>
+    <horario>9 - 13:30</horario>
+    </profesor>
+  </profesores>
+
+  <alumnos>
+    <alumno codigoAlumnoAsig="asig1">
+      <dni></dni>  
+      <nombre></nombre>
+      <apellido></apellido>
+      <fechaNacim></fechaNacim>
+      <direccion></direccion>
+      <telefonos>
+        <telefono></telefono>  
+      </telefonos>
+      <correo></correo>
+      <nota valor="SB"/>    
+    </alumno>  
+    
+    <alumno codigoAlumnoAsig="asig2">
+      <dni></dni>  
+      <nombre></nombre>
+      <apellido></apellido>
+      <fechaNacim></fechaNacim>
+      <direccion></direccion>
+      <telefonos>
+        <telefono></telefono>  
+      </telefonos>
+      <correo></correo>    
+      <nota valor="MH" />    
+    </alumno> 
+    
+    <alumno codigoAlumnoAsig="asig3">
+      <dni></dni>  
+      <nombre></nombre>
+      <apellido></apellido>
+      <fechaNacim></fechaNacim>
+      <direccion></direccion>
+      <telefonos>
+        <telefono></telefono>  
+      </telefonos>
+      <correo></correo>
+      <nota valor="NT"/>       
+    </alumno> 
+  </alumnos>
+</universidad>

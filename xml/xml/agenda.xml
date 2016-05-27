@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<agenda>
+  <letra valor="A">
+    <persona>
+      <nombre></nombre>  
+      <apellidos></apellidos>
+      <direccion>
+        <calle></calle>      
+        <num></num>
+        <ciudad></ciudad>
+        <provincia></provincia>
+      </direccion>
+      <telefonos>
+        <movil></movil>      
+        <fijo></fijo>
+        <trabajo></trabajo>
+      </telefonos>
+    </persona>    
+  </letra>
+  
+  <letra valor="B">
+    <persona nombre="" apellidos="" direccion="" telefonos=""></persona>  
+  </letra>
+  
+  <letra valor="C"></letra>
+  <letra valor="D"></letra>
+  <letra valor="E"></letra>
+  <letra valor="F"></letra>
+</agenda>

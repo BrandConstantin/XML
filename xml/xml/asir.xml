@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ASIR>
+  <asignaturas>
+    <asignatura cod="LM">
+      <duracion semanales="4horas"></duracion>    
+      <caracter tipo="obligatorio"></caracter>
+      <fechaInicio >15/09/2015</fechaInicio>
+      <fechaFin>30/05/2016</fechaFin>
+    </asignatura>  
+    <asignatura cod="SI">
+      <duracion semanales="4horas"></duracion>    
+      <caracter tipo="obligatorio"></caracter>
+      <fechaInicio >15/09/2015</fechaInicio>
+      <fechaFin>30/05/2016</fechaFin>
+    </asignatura>
+  </asignaturas>
+  
+  <alumnos>
+    <alumno nombre="" nif="" telefono="" email="" direccion="">
+      <faltaAsistencia></faltaAsistencia>
+      <notas>
+        <asignatura codigo="LM"></asignatura>      
+        <asignatura codigo="SI"></asignatura>
+      </notas>
+    </alumno>  
+    
+    <alumno nombre="" nif="" telefono="" email="" direccion="">
+      <faltaAsistencia></faltaAsistencia>
+      <notas>
+        <asignatura codigo="LM">Apto</asignatura>      
+        <asignatura codigo="SI"></asignatura>
+      </notas>
+    </alumno> 
+  </alumnos>
+</ASIR>
