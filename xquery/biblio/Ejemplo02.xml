@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<BDlibros>
+ <libro>
+   <codlibro>1</codlibro>
+   <titulo>Don Quijote de la Mancha</titulo>
+   <editorial>Juan de la Cuesta</editorial>
+   <edicion>3</edicion>
+   <ISBN>9788466745840</ISBN>
+   <numpaginas>176</numpaginas>
+   <autores>
+   <autor>
+   <codautor>1</codautor>
+   <nombre>Miguel</nombre>
+   <apellidos>de Cervantes Saavedra</apellidos>
+   <fechanacimiento>29/09/1547</fechanacimiento>
+   </autor>
+   </autores>
+  </libro>
+  
+  <libro>
+   <codlibro>2</codlibro>
+   <titulo>La Celestina</titulo>
+   <editorial>Maxtor</editorial>
+   <edicion>1</edicion>
+   <ISBN>9788471664938</ISBN>
+   <numpaginas>320</numpaginas>
+   <autores>
+   <autor>
+   <codautor>2</codautor>
+   <nombre>Fernandol</nombre>
+   <apellidos>de Rojas</apellidos>
+   <fechanacimiento>01/01/1470</fechanacimiento>
+   </autor>
+    </autores>
+  </libro>
+   
+   
+   <libro>
+   <codlibro>3</codlibro>
+   <titulo>Ultimas historias</titulo>
+   <editorial>Anaya Multimedia</editorial>
+   <edicion>3</edicion>
+   <ISBN>978123456978</ISBN>
+   <numpaginas>576</numpaginas>
+   <autores>
+   <autor>
+   <codautor>13</codautor>
+   <nombre>Pepel</nombre>
+   <apellidos>López</apellidos>
+   <fechanacimiento>11/11/1911</fechanacimiento>
+   </autor>
+   </autores>
+  </libro>
+  
+  
+  <libro>
+   <codlibro>4</codlibro>
+   <titulo>Manual de XML</titulo>
+   <editorial>Anaya Multimedia</editorial>
+   <edicion>3</edicion>
+   <ISBN>111222333444555666</ISBN>
+   <numpaginas>400</numpaginas>
+   <autores>
+   <autor>
+   <codautor>13</codautor>
+   <nombre>Miguel Angel</nombre>
+   <apellidos>Pérez</apellidos>
+   <fechanacimiento>11/08/1968</fechanacimiento>
+   </autor>
+   </autores>
+  </libro>
+  
+    </BDlibros>
+    
+    <!-- Insertar un nodo
+    insert node
+    <libro>
+    	<codlibro>5</codlibro>
+   	  <titulo>La Ilustre Fregona</titulo>
+   	  <editorial>Alfaguara</editorial>
+   	  <edicion>5</edicion>
+  	   <ISBN>9788466111111</ISBN>
+   	  <numpaginas>150</numpaginas>
+     	<autores>
+  		 <autor>
+  		 <codautor>1</codautor>
+   		 <nombre>Miguel</nombre>
+   		 <apellidos>de Cervantes Saavedra</apellidos>
+   		 <fechanacimiento>29/09/1547</fechanacimiento>
+  		 </autor>
+  	 </autores>
+    </libro>
+    as last into doc ("BDbiblio.xml")/BDlibros -->
+    
+    <!-- Modificar un nodo
+    replace value of node
+    doc ("BDbiblio.xml")//BDlibros/libro[codlibro=5]/editorial
+    with "NuevaEditorial" 
+
+    replace node
+    doc ("BDbiblio.xml")//BDlibros/libro[codlibro=5]/numpaginas
+    with <numpaginas>500</numpaginas> -->
+    
+    <!-- Borrar 
+    delete node doc("BDbiblio.xml")//BDlibros/libro[codlibro=5] -->
+    

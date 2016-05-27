@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<BDlibros>
+ <libro>
+   <codlibro>1</codlibro>
+   <titulo>Don Quijote de la Mancha</titulo>
+   <editorial>Juan de la Cuesta</editorial>
+   <edicion>3</edicion>
+   <ISBN>9788466745840</ISBN>
+   <numpaginas>176</numpaginas>
+   <autores>
+   <autor>
+   <codautor>1</codautor>
+   <nombre>Miguel</nombre>
+   <apellidos>de Cervantes Saavedra</apellidos>
+   <fechanacimiento>29/09/1547</fechanacimiento>
+   </autor>
+   </autores>
+  </libro>
+  
+  <libro>
+   <codlibro>2</codlibro>
+   <titulo>La Celestina</titulo>
+   <editorial>Maxtor</editorial>
+   <edicion>1</edicion>
+   <ISBN>9788471664938</ISBN>
+   <numpaginas>320</numpaginas>
+   <autores>
+   <autor>
+   <codautor>2</codautor>
+   <nombre>Fernandol</nombre>
+   <apellidos>de Rojas</apellidos>
+   <fechanacimiento>01/01/1470</fechanacimiento>
+   </autor>
+    </autores>
+  </libro>
+   
+   
+   <libro>
+   <codlibro>3</codlibro>
+   <titulo>Ultimas historias</titulo>
+   <editorial>Anaya Multimedia</editorial>
+   <edicion>3</edicion>
+   <ISBN>978123456978</ISBN>
+   <numpaginas>576</numpaginas>
+   <autores>
+   <autor>
+   <codautor>13</codautor>
+   <nombre>Pepel</nombre>
+   <apellidos>López</apellidos>
+   <fechanacimiento>11/11/1911</fechanacimiento>
+   </autor>
+   </autores>
+  </libro>
+  
+  
+  <libro>
+   <codlibro>4</codlibro>
+   <titulo>Manual de XML</titulo>
+   <editorial>Anaya Multimedia</editorial>
+   <edicion>3</edicion>
+   <ISBN>111222333444555666</ISBN>
+   <numpaginas>400</numpaginas>
+   <autores>
+   <autor>
+   <codautor>13</codautor>
+   <nombre>Miguel Angel</nombre>
+   <apellidos>Pérez</apellidos>
+   <fechanacimiento>11/08/1968</fechanacimiento>
+   </autor>
+   </autores>
+  </libro>
+  
+    </BDlibros>
+    
+    <!-- Teniendo este documento xml hacemos las consultas en Xquery-->
+    
+    <!--Quieremos todos los titulos de los libros
+      doc("BDbiblio.xml")/BDlibros/libro/titulo-->
+      
+    <!-- Quieremos los titulos de los libros que tienen más de 300 páginas
+      for $libro in doc("BDbiblio.xml")/BDlibros/libro
+      where $libro/numpaginas > 300
+      return $libro/titulo
+      
+      Tembién se puede escribir la misma consulta de este módo
+      doc("BDbiblio.xml")/BDlibros/libro[numpaginas > 300]/titulo-->
+      
+    <!--Se puede averiguar los titulos de los libros incluyendo cada resultado en etiqutas html
+        for $l in doc("BDbiblio.xml")/BDlibros/libro/titulo
+        return <titulo>{ $d } </titulos> -->
+        
+    <!--Devolver los titulos de cada uno de los libros junto con el número de autores de los mismos
+        for $b in for $d in doc("BDbiblio.xml")/BDlibros/libro
+        let $c := $b/autores/autor
+        return <libro>{ $b/titulo, <autores>{ count ( $c ) } </autores>}</libro> 
+        
+      También se puede hacer de otra forma
+      for $b in doc("BDbiblio.xml")/BDlibros/libro
+      let $c := cout($b/autores/autor)
+      let $d := $b/titulo
+      return <libro>{ $d, <autores>{ $c } </autores>} </libro> -->
+      
+    <!-- Devolver el titulo de los libros con al menos un autor ordenados por el titulo en orden descendiente
+      for $b in doc("BDbiblio.xml")/BDlibros/libro
+      let $c := $b//autor
+      where count($c) > 0
+      order by $b/titulo descending
+      return $b/titulo -->
+      
+    <!--Seleccionar libros escritos por Cervantes
+      for $r in doc("BDbiblio.xml")/BDlibros/libro
+      where $r/autores/autor/nombre="Miguel" and
+                $r/autores/autor/apellidos="de Cervantes Saavedra"
+      return $r 
+      
+      Tembien se podriá escribir de esta forma 
+      for $r in doc("BDbiblio.xml")/BDlibros/libro
+      where $r/autores/autor[nombre="Miguel" and apellidos="de Cervantes Saavedra"]
+      return $r -->
+      
+    <!-- Si queremos sacar solo los titulos
+      for $r in doc("BDbiblio.xml")/BDlibros/libro
+      where $r/autores/autor[nombre="Miguel" and apellidos="de Cervantes Saavedra"]
+      return $r/titulo -->
+      
+    <!-- Mostrar la consulta de arriba el resultado como un dato
+      for $r in doc("BDbiblio.xml")/BDlibros/libro
+      where $r/autores/autor[nombre="Miguel" and apellidos="de Cervantes Saavedra"]
+      return data($r/titulo)  -->
+      
+    <!-- Mostrar la consulta de arriba el resultado como un texto
+      for $r in doc("BDbiblio.xml")/BDlibros/libro
+      where $r/autores/autor[nombre="Miguel" and apellidos="de Cervantes Saavedra"]
+      return $r/titulo/text()  -->
+      
+    <!-- Un listado de los autores ordenados por apellidos (las mayusculas son alfabeticamente menores que las minúsculas
+    for $r in doc("BDbiblio.xml")/BDlibros/libro/autores/autor
+    order by $r/apellidos
+    return data($r) -->
+    
+    <!-- Listar el nombre de las editoriales que tengan libros de más de 300 páginas y ordenarlas por nombre
+      for $r in doc("BDbiblio.xml")/BDlibros/libro
+      where $r/numpaginas > 300
+      order by $r/editorial
+      return $r/editorial -->
+      
+    <!-- Listar el autor y titulo de sus libros
+    for $a in doc("BDbiblio.xml")/BDlibros/libro
+    let $nombre := $a/autores/autor/nombre
+    let $apellido := $a/autores/autor/apellidos
+    let $titulo := $a/titulo
+    return (<Autor> { $nombre, $apellido, " libro ", $titulo}</Autor>) 
+    
+    También se puede hacer de esta forma
+     for $a in doc("BDbiblio.xml")/BDlibros/libro
+    let $nombre := $a/autores/autor/nombre
+    let $apellido := $a/autores/autor/apellidos
+    let $titulo := $a/titulo
+    return ($nombre, $apellidos, $titulo) 
+    
+    Inlcuso de esta forma
+    for $a in doc("BDbiblio.xml")/BDlibros/libro
+    let $nombre := $a/autores/autor/nombre
+    let $apellido := $a/autores/autor/apellidos
+    let $titulo := $a/titulo
+    return(<libro>{ $nombre, $apellidos, $titulo}</libro> -->

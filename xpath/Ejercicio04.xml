@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<universidad>
+  <asignaturas>
+    <asignatura codigo="asig1">
+      <nombre_asignatura></nombre_asignatura>    
+      <horasSemana></horasSemana>
+      <numCreditos></numCreditos>
+      <carrera></carrera>
+      <curso></curso>
+    </asignatura> 
+    <asignatura codigo="asig2">
+      <nombre_asignatura></nombre_asignatura>     
+      <horasSemana></horasSemana>
+      <numCreditos></numCreditos>
+      <carrera></carrera>
+      <curso></curso>
+    </asignatura> 
+    <asignatura codigo="asig3">
+      <nombre_asignatura></nombre_asignatura>  
+      <horasSemana></horasSemana>
+      <numCreditos></numCreditos>
+      <carrera></carrera>
+      <curso></curso>
+    </asignatura> 
+  </asignaturas>
+
+  <profesores>
+    <profesor codigoProfeAsig="asig1 asig2">
+     <pasaporte>
+        <pais valor="España"></pais>  
+      </pasaporte>
+      <nombre></nombre>
+      <apellidos></apellidos>
+      <fechaNacim></fechaNacim>
+      <direccion></direccion>
+      <telefonos>
+        <telefono></telefono>  
+      </telefonos>
+      <correo></correo>
+    <despachos>
+      <despacho>Sala 1</despacho>    
+    </despachos>
+    <horario>9 - 13:30</horario>
+    </profesor>
+    
+    <profesor codigoProfeAsig="asig2 asig3">
+     <pasaporte>
+        <pais>Alemania</pais>  
+      </pasaporte>
+      <nombre></nombre>
+      <apellidos></apellidos>
+      <fechaNacim></fechaNacim>
+      <direccion></direccion>
+      <telefonos>
+        <telefono></telefono>  
+      </telefonos>
+      <correo></correo>
+    <despachos>
+      <despacho>Sala 1</despacho>    
+    </despachos>
+    <horario>9 - 13:30</horario>
+    </profesor>
+  </profesores>
+
+  <alumnos>
+    <alumno codigoAlumnoAsig="asig1">
+      <dni></dni>  
+      <nombre>Anton </nombre>
+      <apellido>Gonzales</apellido>
+      <fechaNacim></fechaNacim>
+      <direccion></direccion>
+      <telefonos>
+        <telefono></telefono>  
+      </telefonos>
+      <correo></correo>
+      <nota valor="9"/>    
+    </alumno>  
+    
+    <alumno codigoAlumnoAsig="asig2">
+      <dni></dni>  
+      <nombre></nombre>
+      <apellido></apellido>
+      <fechaNacim></fechaNacim>
+      <direccion></direccion>
+      <telefonos>
+        <telefono></telefono>  
+      </telefonos>
+      <correo></correo>    
+      <nota valor="8"></nota>
+    </alumno> 
+    
+    <alumno codigoAlumnoAsig="asig3">
+      <dni>45698521b</dni>  
+      <nombre></nombre>
+      <apellido></apellido>
+      <fechaNacim></fechaNacim>
+      <direccion></direccion>
+      <telefonos>
+        <telefono></telefono>  
+      </telefonos>
+      <correo></correo>
+      <nota valor="7"></nota>
+    </alumno> 
+  </alumnos>
+</universidad>
+
+<!--Dni o pasaporte de los alumnos matriculados en asignatura 3
+  //alumno[@codigoAlumnoAsig="asig3"]/dni-->
+  
+  <!--Nombre de los alumnos con sobresaliente
+    //alumno/nota[@valor="9"]/../nombre | //alumno/nota[@valor="9"]/../apellido-->

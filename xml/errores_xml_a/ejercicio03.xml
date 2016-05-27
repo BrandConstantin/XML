@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<editoriales>
+  <editorial1>
+    <nombre>Casa Luca</nombre>  
+    <direccion>
+      <numero>34</numero>    
+      <calle>Francisco Bose</calle>
+      <ciudad>Málaga</ciudad>
+    </direccion>
+    <correo>casaluca@gmail.com</correo>
+    <web>www.casaluca.com</web>
+    <telefonos>
+      <movil>749 329 345</movil>    
+      <fijo>952 985 745</fijo>
+    </telefonos>
+    <fax></fax>
+  </editorial1>
+  <editorial2>
+    <nombre>Editorial Famosa</nombre>  
+    <direccion>
+      <numero>45</numero>    
+      <calle>Elena de la Troya</calle>
+      <ciudad>Almeria</ciudad>
+    </direccion>
+    <correo>famosaeditorial@gmail.com</correo>
+    <web>www.famosa.com</web>
+    <telefonos>
+      <movil>678 645 543</movil>    
+      <fijo>954 234 543</fijo>
+    </telefonos>
+    <fax></fax>
+  </editorial2>
+</editoriales>

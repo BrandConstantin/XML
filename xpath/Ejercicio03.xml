@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<peliculas>
+  <pelicula>
+    <nombre>Super 8</nombre>
+    <valoracion puntos="4" />
+    <publico>Adultos</publico>
+  </pelicula>
+  
+  <pelicula>
+    <nombre>Los pitufos</nombre>
+    <valoracion puntos="3" />
+    <publico>Todos los públicos</publico>
+  </pelicula>
+</peliculas>
+
+<!--Seleccionar el nombre y el público al que va dirigida las péliculas cuya valoración sea de 4 o más puntos
+  //pelicula/valoracion[@puntos>="4"]/../nombre | //pelicula/valoracion[@puntos>="4"]/../publico-->
+  
+  <!--Nombre de las pelicuals destinadas a todos los publicos
+    //pelicula[publico="Todos los públicos"]/nombre-->

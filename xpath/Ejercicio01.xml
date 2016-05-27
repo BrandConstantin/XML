@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<edificio>
+  <vivienda>
+  <piso>1</piso>
+  <puerta>A</puerta>
+  <vecinos>
+    <nombre>David</nombre>
+    <nombre>Sara</nombre>
+  </vecinos>
+  </vivienda>
+  <vivienda>
+  <piso>1</piso>
+  <puerta>B</puerta>
+  <vecinos>
+    <nombre>Irene</nombre>
+    <nombre>Jaime</nombre>
+  </vecinos>
+  </vivienda>
+    <vivienda>
+  <piso>2</piso>
+  <puerta>C</puerta>
+  <vecinos>
+    <nombre>Irene</nombre>
+    <nombre>Jaime</nombre>
+  </vecinos>
+  </vivienda>
+</edificio>
+
+<!--Listado de los nombres de los vecinos
+  //edificio/vivienda/vecinos/nombre -->
+
+<!-- Vivienda que hay en el piso 1 (puerta del piso 1)
+  //edificio/vivienda[piso=1]/puerta-->

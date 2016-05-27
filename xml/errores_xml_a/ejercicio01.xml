@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <cuestionario>
+  <cuestion> 
+    <pregunta dificultad="baja">¿Qué sale cuando se cruza una yegua con un burro? </pregunta>
+    <respuesta>Un mulo</respuesta>
+  </cuestion>
+  <cuestion>
+    <pregunta dificultad="alta">¿Cuál es la capital de Surinam?
+  </pregunta>
+    <respuesta>Paramaribo</respuesta>
+  </cuestion>
+</cuestionario>
