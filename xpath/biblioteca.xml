@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+   <libro>
+	    <titulo>La vida está en otra parte</titulo>
+    	    <autor>Milan Kundera</autor>
+    	   <fechaPublicacion año="1973"/>
+   </libro>
+   <libro>
+   	 <titulo>Pantaleón y las visitadoras</titulo>
+    	 <autor fechaNacimiento="28/03/1936">Mario Vargas Llosa</autor>
+    	<fechaPublicacion año="1973"/>
+   </libro>
+   <libro>
+   	 <titulo>Conversación en la catedral</titulo>
+    	<autor fechaNacimiento="28/03/1936">Mario Vargas Llosa</autor>
+    	<fechaPublicacion año="1969"/>
+    </libro>
+</biblioteca>
+
+<!--Obtener los títulos de los libros publicados el mismo año que la novela "La vida está en otra parte"-->
+
+<!--Si supieramos que el año es 1973, pondriamos lo siguiente:
+Años de las fechas de publicación de los libros
+
+//libro/fechaPublicacion[@año=1973]/../titulo
+
+Ahora sutituimos 1973 por la expresión que nos lleva al año en que se publicó "La vida está en otra parte".
+La expresión que nos da el año en que se publicó dicha novela es:
+
+//libro[titulo="La vida está en otra parte"]/fechaPublicacion/@año
+
+//libro/fechaPublicacion[@año=//libro[titulo="La vida está en otra parte"]/fechaPublicacion/@año]/../titulo
+
+Ahora vamos a quitar la novela "La vida está en otra parte".  
+//libro[fechaPublicacion/@año=1973 ]/titulo
+
+//libro[fechaPublicacion/@año=1973  and titulo!="La vida está en otra parte"]/titulo
+
+//libro[fechaPublicacion/@año=//libro[titulo="La vida está en otra parte"]/fechaPublicacion/@año and titulo!="La vida está en otra parte"]/titulo
+
+-->

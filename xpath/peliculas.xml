@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<peliculas>
+	<pelicula>
+		<nombre>Super 8</nombre>
+		<director>Director1</director>
+		<valoracion puntos="4" />
+		<publico>Adultos</publico>
+	</pelicula>
+	<pelicula>
+		<nombre>Los pitufos</nombre>
+		<director>Director1</director>
+		<valoracion puntos="3" />
+		<publico>Todos los publicos</publico>
+	</pelicula>
+	<pelicula>
+		<nombre>El Rey Leon</nombre>
+		<director>Director3</director>
+		<valoracion puntos="4" />
+		<publico>Infantil</publico>
+	</pelicula>
+	<pelicula>
+		<nombre>La Cenicienta</nombre>
+		<director>Director4</director>
+		<valoracion />
+  <!--<valoracion puntos="5" />	-->
+		<publico>Infantil</publico>
+	</pelicula>
+</peliculas>
+
+<!--Nombre de las películas cuya valoración es 5-->
+<!--//pelicula/valoracion[@puntos="5"]/../nombre-->
+
+<!--Nombre de las películas infantiles y con el Director4-->
+<!-- 	 //pelicula[publico="Infantil"][director="Director4"]/nombre
+   	
+   	//pelicula[publico="Infantil" and director="Director4"]/nombre-->
+
+
+<!--Nombre y valoración de las películas infantiles y con el Director4-->
+<!-- //pelicula[publico="Infantil"][director="Director4"]/nombre
+   	
+   	//pelicula[publico="Infantil" and director="Director4"]/nombre |
+   	 //pelicula[publico="Infantil" and director="Director4"]/valoracion/@puntos-->
+
+
+
+<!--Nombre de las películas infantiles o de todos los públicos-->
+
+<!--//pelicula[publico="Infantil"]/nombre | //pelicula[publico="Todos los publicos"]/nombre
+
+	//pelicula[publico="Infantil" or publico="Todos los publicos"]/nombre -->
+
+
+<!--Nombre y valoracion  de las películas infantiles o de todos los públicos-->
+
+<!--//pelicula[publico="Infantil" or publico="Todos los publicos"]/nombre |
+	//pelicula[publico="Infantil" or publico="Todos los publicos"]/valoracion/@puntos -->
+
+
+
+<!--Nombre de las películas que no tengan el atributo puntos en el elemento valoración
+//pelicula/valoracion[not (@puntos)]/../nombre -->
