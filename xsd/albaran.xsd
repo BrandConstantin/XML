@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xs:schema SYSTEM "C:/Users/Desktop/albaran.dtd">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="albaran">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="pedido" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="ordenante"/>
+        <xs:element name="articulo"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="pedido">
+    <xs:complexType>
+      <xs:restriction base="xs:string">
+        <xs:patern value="[A-Z a-z] [0-9] {7}">
+        </xs:patern>
+      </xs:restriction>
+    </xs:complexType>
+    
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="trabajador" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="fecha_pedido" ></xs:element>
+        <xs:element name="plazo_revision"></xs:element>
+          <xs:restriction base="gday"></xs:restriction>
+        <xs:element name="observa_pedido"></xs:element>
+          <xs:restriction base="xs:string">
+            <xs:maxLenght value="10"></xs:maxLenght>
+            <xs:enumeration value="urgente"></xs:enumeration>
+            <xs:enumeration value="incompleto"></xs:enumeration>
+          </xs:restriction>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="ordenante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="direccion_albaran" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+          <xs:simpleType>
+            <xs:element name="calle"></xs:element>  
+            <xs:element name="ciudad"></xs:element>
+            <xs:element name="provincia"></xs:element>
+          </xs:simpleType>
+        <xs:element name="direccion_pedido" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+          <xs:simpleType>
+            <xs:element name="calle"></xs:element>  
+            <xs:element name="ciudad"></xs:element>
+            <xs:element name="provincia"></xs:element>
+          </xs:simpleType>
+      </xs:sequence>    
+    </xs:complexType>  
+  </xs:element>
+  
+  <xs:element name="articulo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="cod_articulo" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>      
+          <xs:restriction base="xs:string">
+            <xs:patern value="[A-Z] [A-Z] [A-Z] [0-9]_[0-9]_[0-9]"></xs:patern>          
+          </xs:restriction>
+        <xs:element name="num_unidades" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+          <xs:restrinction base="xs:positiveInteger">
+            <xs:maxExclusiv value="100"></xs:maxExclusiv>          
+          </xs:restrinction>
+        <xs:element name="precio" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+          <xs:restriction base="xs:decimal">
+            <xs:maxLenght value="100"></xs:maxLenght>          
+          </xs:restriction>
+        <xs:element name="observa_articulo" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+          <xs:restriction base="xs:string">
+            <xs:maxLenght value="100"></xs:maxLenght>          
+          </xs:restriction>
+      </xs:sequence>    
+    </xs:complexType>  
+  </xs:element>
+  
+  <xs:annotation>
+  <xs:documentation xml:lang="es-es">
+    Albaran desglosado
+    <fecha_facturación></fecha_facturación>  
+    <num_factura></num_factura>
+    <contable></contable>
+  </xs:documentation>  
+  </xs:annotation>
+  
+  <xs:element name="albaran_digital" type="xs:string">
+    <xs:annotation>
+      <xs:appinfo>
+        <texto>Albaran digital con conta2.0</texto>      
+      </xs:appinfo>    
+    </xs:annotation>  
+  </xs:element>
+  
+</xs:schema>
