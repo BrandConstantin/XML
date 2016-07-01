@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+	  <title>Noticias</title>
+	  <link>http://www.aemet.es/es/portada</link>
+	  <description>Alerta meteo en tu ciudad</description>
+	  <language>es</language>
+	  
+		<item>
+			<title>El tiempo en Málaga</title>
+			<link>http://www.aemet.es/es/eltiempo/prediccion/municipios/malaga</link>
+			<description>Conoce el tiempo en Málaga</description>
+		</item>
+		
+		<item>
+      <title>Liga BBVA</title>	
+      <link>http://elpais.com/tag/liga_espanola_de_futbol/a/</link>
+      <description>Noticias deportivas con el Pais</description>
+		</item>
+		
+		<item>
+      <title>Tecnologia</title>	
+      <link>http://tecnologia.elpais.com/</link>
+      <description>Tendencias tecnologicas con el Pais</description>
+		</item>
+	</channel>
+</rss>

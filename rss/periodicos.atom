@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es-es">
+
+  <title type="text">Noticias</title>
+  <updated>2016-07-01T11:23:00Z</updated>
+  <link rel="alternate" type="text/html" href="http://www.aemet.es/es/portada"
+  <id>http://www.aemet.es/es/portada</id>
+  
+  <entry>
+    <title>El tiempo en Málaga</title>  
+    <link rel="alternate" type="text/html" href="http://www.aemet.es/es/prediccion/municipios/malaga"
+    <id>http://www.aemet.es/es/prediccion/municipios/malaga</id>
+    <author>
+      <name>brinco</name>  
+      <email>brinco@hotmail.com</email>
+    </author>
+    <summary>Mira el tiempo en Málaga</summary>
+  </entry>
+  
+  <entry>
+    <title>Liga BBVA</title>  
+    <link rel="alternate" type="text/html" href="http://elpais.com/tag/liga_espanola_de_futbol/a/"
+    <id>http://elpais.com/tag/liga_espanola_de_futbol/a/</id>
+    <author>
+      <name>brinco</name>  
+      <email>brinco@hotmail.com</email>
+    </author>
+    <summary>Ve el deporte con el Pais</summary>
+  </entry>
+  
+  <entry>
+    <title>Tecnologia</title>  
+    <link rel="alternate" type="text/html" href="http://tecnologia.elpais.com/"
+    <id>http://tecnologia.elpais.com/</id>
+    <author>
+      <name>brinco</name>  
+      <email>brinco@hotmail.com</email>
+    </author>
+    <summary>Ve ultimas tendencias tecnologicas con el Pais</summary>
+  </entry>
+</feed>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+	  <title>Mi primera web</title>
+	  <link>www.primeraweb.com</link>
+	  <description>Noticias</description>
+	  <language>es</language>
+	  
+		<item>
+			<title>Noticia 1</title>
+			<link>www.primeraweb.com/noticia1.html</link>
+			<description>Todo sobre la noticia 1</description>
+		</item>
+		
+		<item>
+      <title>Noticia 2</title>	
+      <link>www.primeraweb.com/noticia2.html</link>
+      <description>Todo sobre la noticia 2</description>
+		</item>
+	</channel>
+</rss>
